@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>VetCare | Clínica Veterinária</title>
+    <title>Clinic Vet Rosa | Clínica Veterinária</title>
     <style>
         * {
             margin: 0;
@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: linear-gradient(145deg, #f5faf5 0%, #e9f0e6 100%);
-            color: #1e2a1f;
+            background: linear-gradient(145deg, #fff5f7 0%, #ffeef2 100%);
+            color: #2d1f2a;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
@@ -28,7 +28,7 @@
 
         /* header / navegação */
         header {
-            background-color: #1c4b2d;
+            background: linear-gradient(135deg, #b83b5e, #9e2d4e);
             color: white;
             padding: 18px 0;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -49,7 +49,7 @@
             font-size: 1.9rem;
             letter-spacing: -0.5px;
             font-weight: 700;
-            background: linear-gradient(135deg, #FFF9E6, #cfe8cf);
+            background: linear-gradient(135deg, #FFE4E9, #FFC0D0);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -57,12 +57,12 @@
         }
         .logo p {
             font-size: 0.85rem;
-            opacity: 0.85;
+            opacity: 0.9;
             font-style: italic;
         }
 
         .nav-links a {
-            color: #f1f9f0;
+            color: #fef0f3;
             text-decoration: none;
             margin-left: 28px;
             font-weight: 500;
@@ -72,15 +72,15 @@
             padding-bottom: 4px;
         }
         .nav-links a:hover {
-            border-bottom-color: #f7c873;
-            color: #fce49e;
+            border-bottom-color: #ffb8c9;
+            color: #fff0f3;
         }
 
         /* botão genérico */
         .btn {
             display: inline-block;
-            background-color: #f5b642;
-            color: #1f3d24;
+            background-color: #d94f6f;
+            color: white;
             font-weight: bold;
             padding: 12px 28px;
             border-radius: 40px;
@@ -92,9 +92,19 @@
             font-size: 1rem;
         }
         .btn:hover {
-            background-color: #ffcd6b;
+            background-color: #c43e5e;
             transform: translateY(-2px);
             box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1da851;
         }
 
         /* hero */
@@ -112,18 +122,18 @@
         .hero-text h2 {
             font-size: 2.8rem;
             font-weight: 800;
-            color: #1b4d2b;
+            color: #b83b5e;
             line-height: 1.2;
             margin-bottom: 20px;
         }
         .hero-text p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #2d422c;
+            color: #5a3e4a;
         }
         .hero-img {
             flex: 1;
-            background: #cce3cd;
+            background: #ffe4ea;
             border-radius: 48px;
             padding: 20px;
             text-align: center;
@@ -151,7 +161,7 @@
             box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
             flex: 1 1 280px;
             transition: all 0.2s;
-            border: 1px solid #ddebe0;
+            border: 1px solid #ffe0e8;
         }
         .card:hover {
             transform: translateY(-6px);
@@ -159,13 +169,13 @@
         }
         .card h3 {
             font-size: 1.8rem;
-            color: #235b2e;
+            color: #b83b5e;
             margin-bottom: 20px;
-            border-left: 5px solid #f5b642;
+            border-left: 5px solid #d94f6f;
             padding-left: 18px;
         }
         .info-badge {
-            background-color: #fef5e7;
+            background-color: #fff0f3;
             border-radius: 28px;
             padding: 20px;
             margin: 25px 0 0;
@@ -179,26 +189,26 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #235b2e;
+            color: #b83b5e;
         }
         .form-group input, 
         .form-group select, 
         .form-group textarea {
             width: 100%;
             padding: 12px 16px;
-            border: 2px solid #e0e8dd;
+            border: 2px solid #ffe0e8;
             border-radius: 16px;
             font-size: 1rem;
             font-family: inherit;
             transition: 0.2s;
-            background: #fefef9;
+            background: #fffef9;
         }
         .form-group input:focus, 
         .form-group select:focus, 
         .form-group textarea:focus {
             outline: none;
-            border-color: #f5b642;
-            box-shadow: 0 0 0 3px rgba(245, 182, 66, 0.2);
+            border-color: #d94f6f;
+            box-shadow: 0 0 0 3px rgba(217, 79, 111, 0.2);
         }
         .form-group textarea {
             resize: vertical;
@@ -236,19 +246,19 @@
         }
         .comment-list {
             margin-top: 30px;
-            border-top: 2px dashed #cce3cd;
+            border-top: 2px dashed #ffe0e8;
             padding-top: 25px;
         }
         .comment-item {
-            background: #faf9f0;
+            background: #fef8f9;
             border-radius: 20px;
             padding: 18px;
             margin-bottom: 16px;
-            border-left: 4px solid #f5b642;
+            border-left: 4px solid #d94f6f;
         }
         .comment-name {
             font-weight: bold;
-            color: #1c4b2d;
+            color: #b83b5e;
             display: inline-block;
             margin-right: 15px;
         }
@@ -259,24 +269,16 @@
         }
         .comment-text {
             margin-top: 10px;
-            color: #2d422c;
+            color: #5a3e4a;
         }
         .comment-date {
             font-size: 0.75rem;
-            color: #7c8f78;
+            color: #b28a9a;
             margin-top: 8px;
-        }
-        .btn-small {
-            background-color: #e9ece5;
-            padding: 8px 16px;
-            font-size: 0.85rem;
-            border-radius: 30px;
-            color: #1f3d24;
-            margin-left: 10px;
         }
 
         /* tabela enem + salário */
-        .enem-table, .salary-stats {
+        .enem-table {
             width: 100%;
             background: #fafef7;
             border-radius: 28px;
@@ -290,19 +292,19 @@
         th, td {
             padding: 14px 12px;
             text-align: left;
-            border-bottom: 1px solid #d0e2cf;
+            border-bottom: 1px solid #ffe0e8;
         }
         th {
-            background-color: #e1f0df;
+            background-color: #fff0f3;
             font-weight: 700;
-            color: #1e4620;
+            color: #b83b5e;
         }
         .highlight {
-            background-color: #fff1d2;
+            background-color: #ffeef2;
             font-weight: bold;
         }
 
-        /* referencias clinica */
+        /* listas */
         .ref-list {
             list-style: none;
             padding-left: 0;
@@ -321,9 +323,42 @@
             font-size: 1.2rem;
         }
 
+        .care-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .care-list li {
+            margin-bottom: 15px;
+            padding-left: 32px;
+            position: relative;
+            font-size: 1rem;
+        }
+        .care-list li:before {
+            content: "💗";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .nutrition-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .nutrition-list li {
+            margin-bottom: 15px;
+            padding-left: 32px;
+            position: relative;
+        }
+        .nutrition-list li:before {
+            content: "🥩";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
         /* média salarial box */
         .salary-box {
-            background: linear-gradient(120deg, #f8f3e0, #f0f5ec);
+            background: linear-gradient(120deg, #fff5f7, #fff0f3);
             border-radius: 28px;
             padding: 20px 28px;
             margin-top: 20px;
@@ -331,14 +366,14 @@
         .salary-number {
             font-size: 2.4rem;
             font-weight: 800;
-            color: #2b6e3c;
+            color: #b83b5e;
             margin: 10px 0;
         }
 
         /* rodapé */
         footer {
-            background-color: #1c3b24;
-            color: #d9e3cf;
+            background-color: #9e2d4e;
+            color: #ffe4ea;
             padding: 32px 0;
             margin-top: 60px;
             text-align: center;
@@ -355,6 +390,29 @@
             font-size: 0.85rem;
         }
 
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+            z-index: 99;
+        }
+        .whatsapp-fixed:hover {
+            transform: scale(1.1);
+            background-color: #1da851;
+        }
+
         @media (max-width: 780px) {
             .header-flex {
                 flex-direction: column;
@@ -369,6 +427,13 @@
             .card h3 {
                 font-size: 1.5rem;
             }
+            .whatsapp-fixed {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -377,14 +442,16 @@
 <header>
     <div class="container header-flex">
         <div class="logo">
-            <h1>🐕 VetCare Clinic</h1>
-            <p>amor que cura, ciência que acolhe</p>
+            <h1>🌸 Clinic Vet Rosa</h1>
+            <p>cuidado com amor, excelência em cada detalhe</p>
         </div>
         <div class="nav-links">
             <a href="#sobre">Sobre</a>
+            <a href="#atendimento">Atendimento</a>
+            <a href="#cuidados">Cuidados</a>
+            <a href="#nutricao">Nutrição</a>
             <a href="#enem">Nota ENEM</a>
             <a href="#salario">Média Salarial</a>
-            <a href="#referencias">Referências</a>
             <a href="#avaliacoes">Avaliações</a>
             <a href="#agendamento">Agendar</a>
         </div>
@@ -392,28 +459,94 @@
 </header>
 
 <main class="container">
-    <!-- Hero com introdução amigável -->
+    <!-- Hero -->
     <div class="hero">
         <div class="hero-text">
-            <h2>Saúde e bem-estar<br>para quem você ama 🐶🐱</h2>
-            <p>Atendimento humanizado, tecnologia de ponta e profissionais apaixonados por pets. Há mais de 12 anos cuidando do seu melhor amigo.</p>
-            <a href="#agendamento" class="btn">Agende sua consulta →</a>
+            <h2>Amor que cura,<br>ciência que acolhe 🌸🐾</h2>
+            <p>Atendimento humanizado, tecnologia de ponta e profissionais apaixonados por pets. Há mais de 10 anos cuidando do seu melhor amigo com carinho e dedicação.</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Clinic%20Vet%20Rosa" target="_blank" class="btn btn-whatsapp">📱 Fale conosco no WhatsApp</a>
         </div>
         <div class="hero-img">
             <svg width="260" height="200" viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="150" cy="110" r="70" fill="#E6F0E3" stroke="#34623C" stroke-width="2"/>
-                <path d="M115 95 L130 85 L145 95 L160 85 L175 95" stroke="#4A6A3B" stroke-width="3" fill="none" stroke-linecap="round"/>
-                <circle cx="125" cy="105" r="5" fill="#2C4B2E"/>
-                <circle cx="175" cy="105" r="5" fill="#2C4B2E"/>
-                <path d="M140 125 Q150 140 160 125" stroke="#8B5A2B" stroke-width="3" fill="none"/>
+                <circle cx="150" cy="110" r="70" fill="#FFE0E8" stroke="#D94F6F" stroke-width="2"/>
+                <path d="M115 95 L130 85 L145 95 L160 85 L175 95" stroke="#B83B5E" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <circle cx="125" cy="105" r="5" fill="#B83B5E"/>
+                <circle cx="175" cy="105" r="5" fill="#B83B5E"/>
+                <path d="M140 125 Q150 140 160 125" stroke="#D94F6F" stroke-width="3" fill="none"/>
                 <path d="M190 150 L210 145 L200 165 Z" fill="#F5B642" opacity="0.9"/>
-                <rect x="60" y="160" width="180" height="20" rx="8" fill="#CDA776" />
+                <rect x="60" y="160" width="180" height="20" rx="8" fill="#E8A4B8" />
                 <text x="135" y="178" font-size="12" fill="white" font-weight="bold">+Amor</text>
             </svg>
         </div>
     </div>
 
-    <!-- SEÇÃO: NOTA DE CORTE DO ENEM (Medicina Veterinária) -->
+    <!-- SEÇÃO: COMO FUNCIONA O ATENDIMENTO -->
+    <section id="atendimento">
+        <div class="card">
+            <h3>🩺 Como funciona nosso atendimento</h3>
+            <p>Na Clinic Vet Rosa, organizamos cada etapa para oferecer conforto, agilidade e segurança para você e seu pet.</p>
+            <div class="card-grid" style="margin-top: 20px;">
+                <div class="card" style="background: #fff9fb;">
+                    <h3 style="font-size: 1.3rem;">1️⃣ Agendamento</h3>
+                    <p>Agende pelo site, WhatsApp ou telefone. Escolha a especialidade e o horário que melhor se encaixa na sua rotina.</p>
+                </div>
+                <div class="card" style="background: #fff9fb;">
+                    <h3 style="font-size: 1.3rem;">2️⃣ Chegada & Acolhimento</h3>
+                    <p>Ambiente climatizado, recepção acolhedora e equipe preparada para receber você e seu pet com tranquilidade.</p>
+                </div>
+                <div class="card" style="background: #fff9fb;">
+                    <h3 style="font-size: 1.3rem;">3️⃣ Consulta e Diagnóstico</h3>
+                    <p>Atendimento individualizado, exames de imagem e laboratório no local para diagnóstico rápido e preciso.</p>
+                </div>
+                <div class="card" style="background: #fff9fb;">
+                    <h3 style="font-size: 1.3rem;">4️⃣ Acompanhamento</h3>
+                    <p>Retornos agendados, suporte via WhatsApp e plano de tratamento personalizado para cada caso.</p>
+                </div>
+            </div>
+            <div class="info-badge">
+                ⏰ <strong>Horário de funcionamento:</strong> Segunda a sábado, das 8h às 20h | Emergências 24h (plantão veterinário)
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CUIDADOS COM O ANIMAL -->
+    <section id="cuidados">
+        <div class="card">
+            <h3>💖 Cuidados especiais que oferecemos</h3>
+            <p>Seu pet é tratado como membro da família. Nossos protocolos garantem bem-estar físico e emocional:</p>
+            <ul class="care-list">
+                <li><strong>Atendimento sem estresse:</strong> Utilizamos técnicas de contenção suave e ambiente adaptado para reduzir a ansiedade.</li>
+                <li><strong>Monitoramento contínuo:</strong> Pacientes internados recebem acompanhamento 24h com equipe especializada.</li>
+                <li><strong>Espaço adaptado para gatos:</strong> Sala exclusiva com feromônios e ambiente tranquilo para felinos.</li>
+                <li><strong>Protocolos de dor e bem-estar:</strong> Avaliamos a dor em cada etapa, garantindo conforto máximo.</li>
+                <li><strong>Cuidados pós-cirúrgicos:</strong> Acompanhamento detalhado com orientações personalizadas para recuperação rápida.</li>
+                <li><strong>Atendimento domiciliar:</strong> Para pacientes com mobilidade reduzida ou tutores que preferem conforto em casa.</li>
+            </ul>
+            <div class="info-badge" style="margin-top: 20px;">
+                🐕 <strong>Nosso compromisso:</strong> Respeito, paciência e amor em cada interação. Cada animal tem sua própria personalidade e tratamos com a individualidade que merecem.
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: NUTRIÇÃO DE QUALIDADE -->
+    <section id="nutricao">
+        <div class="card">
+            <h3>🥗 Nutrição de qualidade para seu pet</h3>
+            <p>A alimentação é a base da saúde! Nossos nutricionistas veterinários criam planos alimentares personalizados:</p>
+            <ul class="nutrition-list">
+                <li><strong>Rações premium e super premium:</strong> Parceria com marcas de alta qualidade, com opções para todas as fases da vida.</li>
+                <li><strong>Dietas naturais e caseiras balanceadas:</strong> Elaboradas por nutricionistas veterinários para garantir todos os nutrientes essenciais.</li>
+                <li><strong>Alimentação para condições específicas:</strong> Dietas terapêuticas para doenças renais, hepáticas, diabetes, alergias e obesidade.</li>
+                <li><strong>Suplementação personalizada:</strong> Vitaminas, ômega-3, probióticos e nutracêuticos conforme necessidade.</li>
+                <li><strong>Orientação nutricional gratuita:</strong> Consulta com nossa equipe para esclarecer dúvidas sobre a melhor alimentação.</li>
+            </ul>
+            <div class="info-badge" style="margin-top: 20px; background: #fff0f3;">
+                🍽️ <strong>Dica de ouro:</strong> Ofereça sempre água fresca e evite alimentos tóxicos como chocolate, cebola e uva. Conte conosco para montar a dieta ideal!
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: NOTA DE CORTE DO ENEM -->
     <section id="enem">
         <div class="card">
             <h3>📌 Nota de Corte do ENEM</h3>
@@ -434,73 +567,36 @@
                     </tbody>
                 </table>
                 <div class="info-badge">
-                    ⚕️ <strong>Dica:</strong> Para Medicina Veterinária, as notas de corte costumam ser altas em universidades federais e estaduais, exigindo média acima de 700. Invista em redação e ciências da natureza. Na nossa clínica, valorizamos profissionais que passaram por essas jornadas!
+                    ⚕️ <strong>Dica:</strong> Para Medicina Veterinária, as notas de corte costumam ser altas. Invista em redação e ciências da natureza. Nossa clínica valoriza profissionais que buscam excelência!
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: MÉDIA SALARIAL DE MÉDICO VETERINÁRIO -->
+    <!-- SEÇÃO: MÉDIA SALARIAL -->
     <section id="salario">
         <div class="card">
             <h3>💰 Média Salarial – Médico Veterinário</h3>
-            <p>O mercado para médicos veterinários está em plena expansão, com oportunidades em clínicas, hospitais, agroindústria, saúde pública e docência. Confira os valores médios no Brasil (dados 2024/2025):</p>
+            <p>O mercado para médicos veterinários está em plena expansão. Confira os valores médios no Brasil (dados 2024/2025):</p>
             <div class="salary-box">
                 <div class="salary-number">R$ 4.200 a R$ 11.500+</div>
                 <p>Faixa salarial mensal (CLT / PJ / autônomo) conforme experiência e região.</p>
-                <hr style="margin: 15px 0; border-color: #cbdcc2;">
+                <hr style="margin: 15px 0; border-color: #ffe0e8;">
                 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
                     <div><strong>🌱 Início de carreira</strong><br>R$ 3.200 - R$ 4.800</div>
-                    <div><strong>📈 Especialista (dermatologia, cirurgia)</strong><br>R$ 7.500 - R$ 12.000</div>
-                    <div><strong>🏥 Gestão / Proprietário de clínica</strong><br>R$ 10.000 - R$ 20.000+</div>
+                    <div><strong>📈 Especialista</strong><br>R$ 7.500 - R$ 12.000</div>
+                    <div><strong>🏥 Gestão / Proprietário</strong><br>R$ 10.000 - R$ 20.000+</div>
                 </div>
-                <p style="margin-top: 20px; font-size: 0.9rem;">📊 Fonte: CFPV / Conselho Regional de Medicina Veterinária e pesquisas setoriais. Na VetCare, oferecemos plano de carreira e remuneração competitiva alinhada à excelência.</p>
-            </div>
-            <div style="margin-top: 20px; background: #eef4ea; border-radius: 24px; padding: 18px;">
-                <p>✨ <strong>Mercado aquecido:</strong> O Brasil possui uma das maiores populações de pets do mundo, e a demanda por médicos veterinários cresce cerca de 8% ao ano. Além da clínica, áreas como auditoria, inspeção de alimentos e bem-estar animal estão em alta.</p>
+                <p style="margin-top: 20px;">📊 Fonte: CFMV / Conselho Regional de Medicina Veterinária.</p>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: REFERÊNCIAS SOBRE A CLÍNICA + SOBRE NÓS -->
-    <section id="referencias">
-        <div class="card">
-            <h3>🏥 Referências sobre a VetCare</h3>
-            <p>Nossa clínica é reconhecida como centro de referência em medicina veterinária na região metropolitana. Abaixo, alguns fatos e diferenciais que nos tornam uma escolha de confiança:</p>
-            <ul class="ref-list">
-                <li><strong>Mais de 12.500 atendimentos realizados</strong> desde a fundação (2012), com taxa de satisfação de 98% entre tutores.</li>
-                <li><strong>Certificação ISO 9001 em gestão da qualidade</strong> e selo "Clínica Amiga dos Pets" pelo CRMV-SP.</li>
-                <li><strong>Equipe multidisciplinar:</strong> clínica geral, cirurgia ortopédica, dermatologia veterinária, oncologia e odontologia.</li>
-                <li><strong>Convênios com laboratórios referência</strong> para exames de imagem (ressonância, ultrassom) e análises clínicas com resultado em tempo ágil.</li>
-                <li><strong>Programa de atendimento a animais resgatados</strong> – parceria com ONGs locais, oferecendo castração solidária e consultas a preço social.</li>
-                <li><strong>Referência em telemedicina veterinária:</strong> pioneiros no acompanhamento remoto para tutores de outras regiões.</li>
-            </ul>
-            <div class="info-badge" style="margin-top: 25px;">
-                🏆 <strong>Prêmio Melhor Clínica Veterinária do Ano (2023)</strong> – Guia Pet Brasil. Nosso compromisso é com a inovação e o cuidado ético.
-            </div>
-        </div>
-
-        <div class="card-grid" style="margin-top: 20px;">
-            <div class="card" style="background: #fefaf0;">
-                <h3 style="font-size: 1.4rem;">📚 Referências técnicas</h3>
-                <p>A VetCare colabora com projetos de pesquisa da Faculdade de Medicina Veterinária da USP e UFMG, além de ser campo de estágio para estudantes. Nosso protocolo clínico segue as melhores diretrizes do CFMV.</p>
-                <p style="margin-top: 12px;">🔬 <strong>Diferencial:</strong> investimos continuamente em equipamentos de última geração – como laserterapia e aparelho de ultrassom Doppler – garantindo diagnósticos precisos.</p>
-            </div>
-            <div class="card" style="background: #fefaf0;">
-                <h3 style="font-size: 1.4rem;">⭐ Depoimentos & Confiança</h3>
-                <p><i>"A VetCare salvou a vida do meu Golden Retriever com uma cirurgia de emergência. Profissionais atenciosos e estrutura impecável. Nota 1000!"</i> – Mariana S.</p>
-                <p style="margin-top: 16px;"><i>"Ambiente acolhedor e veterinários extremamente competentes. Referência absoluta em São Paulo."</i> – Rafael C.</p>
-                <p style="margin-top: 16px;">✔️ +1.200 avaliações 5 estrelas no Google Meu Negócio.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOVA SEÇÃO: AVALIAÇÕES / COMENTÁRIOS DOS CLIENTES -->
+    <!-- SEÇÃO: AVALIAÇÕES -->
     <section id="avaliacoes">
         <div class="card">
             <h3>⭐ Deixe seu comentário sobre o atendimento</h3>
-            <p>Sua opinião é muito importante para nós! Compartilhe sua experiência com a VetCare.</p>
-            
+            <p>Sua opinião é muito importante para nós!</p>
             <form id="commentForm">
                 <div class="form-group">
                     <label>Seu nome *</label>
@@ -518,101 +614,45 @@
                 </div>
                 <div class="form-group">
                     <label>Seu comentário *</label>
-                    <textarea id="commentText" placeholder="Conte como foi sua experiência conosco..." required></textarea>
+                    <textarea id="commentText" placeholder="Conte como foi sua experiência..." required></textarea>
                 </div>
                 <button type="submit" class="btn">Enviar avaliação ✨</button>
-                <div id="commentSuccess" class="success-message">✅ Obrigado! Seu comentário foi enviado com sucesso.</div>
+                <div id="commentSuccess" class="success-message">✅ Obrigado! Seu comentário foi enviado.</div>
             </form>
-
             <div class="comment-list">
-                <h4 style="color: #235b2e; margin-bottom: 15px;">📝 Últimas avaliações de clientes</h4>
-                <div id="commentsContainer">
-                    <!-- Comentários serão inseridos dinamicamente aqui -->
-                </div>
+                <h4 style="color: #b83b5e;">📝 Últimas avaliações</h4>
+                <div id="commentsContainer"></div>
             </div>
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: AGENDAMENTO DE CONSULTA -->
+    <!-- SEÇÃO: AGENDAMENTO -->
     <section id="agendamento">
         <div class="card">
             <h3>📅 Agende sua consulta</h3>
-            <p>Preencha o formulário abaixo e nossa equipe entrará em contato para confirmar o horário.</p>
-            
+            <p>Preencha o formulário e nossa equipe entrará em contato para confirmar.</p>
             <form id="scheduleForm">
-                <div class="form-group">
-                    <label>Nome completo do tutor *</label>
-                    <input type="text" id="tutorName" placeholder="Seu nome" required>
-                </div>
-                <div class="form-group">
-                    <label>Telefone para contato *</label>
-                    <input type="tel" id="phone" placeholder="(11) 99999-9999" required>
-                </div>
-                <div class="form-group">
-                    <label>E-mail *</label>
-                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label>Nome do pet *</label>
-                    <input type="text" id="petName" placeholder="Nome do seu animal" required>
-                </div>
-                <div class="form-group">
-                    <label>Tipo de animal</label>
-                    <select id="petType">
-                        <option value="cachorro">🐕 Cachorro</option>
-                        <option value="gato">🐈 Gato</option>
-                        <option value="outro">🐹 Outro (ave, roedor, etc)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Especialidade desejada *</label>
-                    <select id="specialty" required>
-                        <option value="">Selecione...</option>
-                        <option value="clinica geral">Clínica Geral</option>
-                        <option value="vacinas">Vacinação</option>
-                        <option value="cirurgia">Cirurgia</option>
-                        <option value="dermatologia">Dermatologia</option>
-                        <option value="odontologia">Odontologia</option>
-                        <option value="ortopedia">Ortopedia</option>
-                        <option value="oncologia">Oncologia</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Data preferencial *</label>
-                    <input type="date" id="preferredDate" required>
-                </div>
-                <div class="form-group">
-                    <label>Horário preferencial</label>
-                    <select id="preferredTime">
-                        <option value="manha">Manhã (8h às 12h)</option>
-                        <option value="tarde">Tarde (13h às 18h)</option>
-                        <option value="noite">Noite (18h às 21h)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Mensagem adicional (opcional)</label>
-                    <textarea id="message" placeholder="Conte-nos mais sobre seu pet ou alguma necessidade especial..."></textarea>
-                </div>
+                <div class="form-group"><label>Nome completo *</label><input type="text" id="tutorName" required></div>
+                <div class="form-group"><label>Telefone *</label><input type="tel" id="phone" required></div>
+                <div class="form-group"><label>E-mail *</label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Nome do pet *</label><input type="text" id="petName" required></div>
+                <div class="form-group"><label>Tipo de animal</label><select id="petType"><option value="cachorro">🐕 Cachorro</option><option value="gato">🐈 Gato</option><option value="outro">🐹 Outro</option></select></div>
+                <div class="form-group"><label>Especialidade *</label><select id="specialty" required><option value="">Selecione</option><option>Clínica Geral</option><option>Vacinas</option><option>Cirurgia</option><option>Dermatologia</option><option>Nutrição</option></select></div>
+                <div class="form-group"><label>Data preferencial *</label><input type="date" id="preferredDate" required></div>
+                <div class="form-group"><label>Horário</label><select id="preferredTime"><option>Manhã (8h-12h)</option><option>Tarde (13h-18h)</option><option>Noite (18h-21h)</option></select></div>
                 <button type="submit" class="btn">Solicitar agendamento 📞</button>
-                <div id="scheduleSuccess" class="success-message">✅ Agendamento solicitado! Entraremos em contato em breve para confirmar.</div>
+                <div id="scheduleSuccess" class="success-message">✅ Agendamento solicitado! Entraremos em contato.</div>
             </form>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE (extra) integrando valores e missão -->
+    <!-- SEÇÃO SOBRE -->
     <section id="sobre">
         <div class="card">
-            <h3>🐾 Nossa Filosofia e Missão</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
-                <div style="flex:1">
-                    <p><strong>Missão:</strong> Proporcionar atendimento veterinário de excelência com empatia, tecnologia e responsabilidade socioambiental, promovendo saúde e qualidade de vida para animais e seus tutores.</p>
-                    <p style="margin-top: 15px;"><strong>Visão:</strong> Ser referência nacional em inovação clínica e gestão humanizada até 2028.</p>
-                    <p style="margin-top: 15px;"><strong>Valores:</strong> Ética, amor pelos animais, atualização contínua, transparência e compromisso com a comunidade.</p>
-                </div>
-                <div style="flex:0.7; background: #e5f0e2; border-radius: 28px; padding: 18px; text-align: center;">
-                    <span style="font-size: 3rem;">🐕‍🦺</span>
-                    <p style="font-weight: bold;">+ 30 profissionais<br> prontos para cuidar</p>
-                </div>
+            <h3>🌸 Nossa Filosofia e Missão</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex:1"><p><strong>Missão:</strong> Proporcionar atendimento veterinário de excelência com empatia, tecnologia e responsabilidade.</p><p style="margin-top:15px;"><strong>Visão:</strong> Ser referência nacional em inovação clínica e gestão humanizada.</p><p style="margin-top:15px;"><strong>Valores:</strong> Ética, amor pelos animais, atualização contínua e compromisso com a comunidade.</p></div>
+                <div style="flex:0.7; background:#ffeef2; border-radius:28px; padding:18px; text-align:center;"><span style="font-size:3rem;">🐕‍🦺</span><p><strong>+ 30 profissionais</strong><br> prontos para cuidar</p></div>
             </div>
         </div>
     </section>
@@ -620,144 +660,30 @@
 
 <footer>
     <div class="container footer-content">
-        <div>
-            <p style="font-weight: bold;">🐾 VetCare Clínica Veterinária</p>
-            <p>📍 Av. das Hortênsias, 1250 - Jardim Saúde, São Paulo - SP</p>
-            <p>📞 (11) 3088-4422 | 📧 contato@vetcare.com.br</p>
-        </div>
-        <div class="footer-copy">
-            <p>© 2025 VetCare. Amor & ciência em cada patinha.</p>
-            <p>💚 Atendimento 24h - Emergências e consultas agendadas.</p>
-        </div>
+        <div><p><strong>🌸 Clinic Vet Rosa</strong></p><p>📍 Rua das Rosas, 520 - Jardim das Flores, São Paulo - SP</p><p>📞 (11) 3088-4422 | 📧 contato@clinicvetrosa.com.br</p></div>
+        <div class="footer-copy"><p>© 2025 Clinic Vet Rosa. Amor & ciência em cada patinha.</p><p>💚 Atendimento 24h - Emergências e consultas agendadas.</p></div>
     </div>
-    <div style="margin-top: 20px; font-size: 0.75rem; opacity: 0.7;">
-        Dados de nota de corte ENEM e salário baseados em levantamentos do MEC/SISU 2024 e Conselho Federal de Medicina Veterinária.
-    </div>
+    <div style="margin-top:20px; font-size:0.75rem;">Dados ENEM e salário baseados em levantamentos MEC/SISU 2024 e CFMV.</div>
 </footer>
 
-<script>
-    // Sistema de comentários com localStorage
-    let comments = [];
+<!-- Botão WhatsApp flutuante -->
+<a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20ou%20tirar%20dúvidas%20sobre%20a%20Clinic%20Vet%20Rosa" target="_blank" class="whatsapp-fixed">💬</a>
 
+<script>
+    let comments = [];
     function loadComments() {
-        const stored = localStorage.getItem('vetcare_comments');
-        if (stored) {
-            comments = JSON.parse(stored);
-        } else {
-            // Comentários iniciais de exemplo
-            comments = [
-                { name: "Fernanda Lima", rating: 5, text: "Atendimento maravilhoso! Minha gatinha foi super bem tratada. Equipe muito atenciosa e estrutura impecável.", date: "2025-03-15" },
-                { name: "Carlos Eduardo", rating: 5, text: "Excelente clínica! O Dr. Ricardo é um profissional incrível. Meu cachorro já está 100% recuperado.", date: "2025-03-10" },
-                { name: "Juliana M.", rating: 4, text: "Gostei muito do cuidado com meu pet. Só demorou um pouco no agendamento, mas valeu a pena.", date: "2025-03-05" }
-            ];
-        }
+        const stored = localStorage.getItem('clinicvetrosa_comments');
+        if (stored) comments = JSON.parse(stored);
+        else comments = [{ name: "Mariana Souza", rating: 5, text: "Atendimento maravilhoso! Minha gatinha foi super bem tratada. Equipe muito atenciosa.", date: "2025-03-18" },{ name: "Ricardo Alves", rating: 5, text: "Excelente clínica! Profissionais incríveis e estrutura impecável.", date: "2025-03-15" }];
         renderComments();
     }
-
     function renderComments() {
         const container = document.getElementById('commentsContainer');
-        if (!container) return;
-        
-        if (comments.length === 0) {
-            container.innerHTML = '<p style="color:#7c8f78;">Seja o primeiro a deixar um comentário! 💚</p>';
-            return;
-        }
-        
-        container.innerHTML = comments.map(comment => {
-            const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
-            return `
-                <div class="comment-item">
-                    <div>
-                        <span class="comment-name">${escapeHtml(comment.name)}</span>
-                        <span class="comment-stars">${stars}</span>
-                    </div>
-                    <div class="comment-text">${escapeHtml(comment.text)}</div>
-                    <div class="comment-date">📅 ${comment.date || 'Recente'}</div>
-                </div>
-            `;
-        }).join('');
+        if(!container) return;
+        if(comments.length===0){ container.innerHTML='<p>Seja o primeiro a comentar! 💚</p>'; return; }
+        container.innerHTML = comments.map(c => `<div class="comment-item"><div><span class="comment-name">${escapeHtml(c.name)}</span><span class="comment-stars">${'★'.repeat(c.rating)+'☆'.repeat(5-c.rating)}</span></div><div class="comment-text">${escapeHtml(c.text)}</div><div class="comment-date">📅 ${c.date||'Recente'}</div></div>`).join('');
     }
-
-    function escapeHtml(str) {
-        if (!str) return '';
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
-        });
-    }
-
-    function addComment(name, rating, text) {
-        const today = new Date().toISOString().slice(0, 10);
-        comments.unshift({
-            name: name,
-            rating: parseInt(rating),
-            text: text,
-            date: today
-        });
-        if (comments.length > 15) comments.pop();
-        localStorage.setItem('vetcare_comments', JSON.stringify(comments));
-        renderComments();
-    }
-
-    // Formulário de comentários
-    const commentForm = document.getElementById('commentForm');
-    if (commentForm) {
-        commentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('commentName').value.trim();
-            const rating = document.querySelector('input[name="rating"]:checked');
-            const text = document.getElementById('commentText').value.trim();
-            
-            if (!name || !rating || !text) {
-                alert('Por favor, preencha todos os campos obrigatórios (nome, avaliação e comentário).');
-                return;
-            }
-            
-            addComment(name, rating.value, text);
-            
-            // Limpar formulário
-            document.getElementById('commentName').value = '';
-            document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
-            document.getElementById('commentText').value = '';
-            
-            const successMsg = document.getElementById('commentSuccess');
-            successMsg.style.display = 'block';
-            setTimeout(() => { successMsg.style.display = 'none'; }, 3000);
-        });
-    }
-
-    // Formulário de agendamento
-    const scheduleForm = document.getElementById('scheduleForm');
-    if (scheduleForm) {
-        scheduleForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const tutorName = document.getElementById('tutorName').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const petName = document.getElementById('petName').value.trim();
-            const specialty = document.getElementById('specialty').value;
-            const preferredDate = document.getElementById('preferredDate').value;
-            
-            if (!tutorName || !phone || !email || !petName || !specialty || !preferredDate) {
-                alert('Por favor, preencha todos os campos obrigatórios (*).');
-                return;
-            }
-            
-            // Simular envio - armazenar no localStorage como histórico simples
-            const appointments = JSON.parse(localStorage.getItem('vetcare_appointments') || '[]');
-            appointments.push({
-                tutor: tutorName,
-                pet: petName,
-                specialty: specialty,
-                date: preferredDate,
-                timeSlot: document.getElementById('preferredTime').value,
-                email: email,
-                phone: phone,
-                message: document.getElementById('message').value,
-                createdAt: new Date().toISOString()
-            });
+    function escapeHtml(str){ if(!str) return ''; return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+    function addComment(name,rating,text){ const today=new Date().toISOString().slice(0,10); comments.unshift({name,rating:parseInt(rating),text,date:today}); if(comments.length>15) comments.pop(); localStorage.setItem('clinicvetrosa_comments',JSON.stringify(comments)); renderComments(); }
+    document.getElementById('commentForm')?.addEventListener('submit',function(e){ e.preventDefault(); const name=document.getElementById('commentName').value.trim(); const rating=document.querySelector('input[name="rating"]:checked'); const text=document.getElementById('commentText').value.trim(); if(!name||!rating||!text){ alert('Preencha todos os campos'); return; } addComment(name,rating.value,text); document.getElementById('commentName').value=''; document.querySelectorAll('input[name="rating"]').forEach(r=>r.checked=false); document.getElementById('commentText').value=''; const msg=document.getElementById('commentSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); });
+    document.getElementById('scheduleForm')?.addEventListener('submit',function(e){ e.preventDefault(); const tutor=document.getElementById('tutorName').value.trim(); const phone=document.getElementById('phone').value.trim(); const email=document.getElementById('email').value.trim(); const pet=document.getElementById('petName').value.trim(); const spec=document.getElementById('specialty').value; const date=document.getElementById('preferredDate').value; if(!tutor||!phone||!email||!pet||!spec||!date){ alert('Preencha todos os campos obrigatórios'); return; } const appointments=JSON.parse(localStorage.getItem('clinicvetrosa_appointments')||'[]'); appointments.push({tutor,pet,specialty:spec,date,timeSlot:document.getElementById('preferredTime').value,email,phone,createdAt:new Date().toISOString()}); localStorage.setItem('clinicvetrosa_appointments',JSON.stringify(appointments)); const msg=document.getElementById('scheduleSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); document.getElementById('scheduleForm').reset
