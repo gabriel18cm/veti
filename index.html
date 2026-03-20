@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="https://simples.vet/blog/gestao/como-montar-uma-clinica-veterinaria-de-sucesso/" viewBox="0 0 100 100" opacity="0.08"><path fill="%23366b3e" d="M20,40 L30,30 L40,40 L30,50 Z M60,30 L70,20 L80,30 L70,40 Z M40,70 L50,60 L60,70 L50,80 Z M75,75 L85,65 L95,75 L85,85 Z M10,80 L20,70 L30,80 L20,90 Z" /><circle cx="50" cy="50" r="8" fill="%23366b3e"/><path d="M45,45 L55,55 M55,45 L45,55" stroke="%23366b3e" stroke-width="2"/></svg>') repeat;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.08"><path fill="%23366b3e" d="M20,40 L30,30 L40,40 L30,50 Z M60,30 L70,20 L80,30 L70,40 Z M40,70 L50,60 L60,70 L50,80 Z M75,75 L85,65 L95,75 L85,85 Z M10,80 L20,70 L30,80 L20,90 Z" /><circle cx="50" cy="50" r="8" fill="%23366b3e"/><path d="M45,45 L55,55 M55,45 L45,55" stroke="%23366b3e" stroke-width="2"/></svg>') repeat;
             background-color: #e8f3e8;
             color: #1a3a1e;
             line-height: 1.5;
@@ -710,27 +710,194 @@
         </div>
     </div>
 
-    <!-- Demais seções (atendimento, cuidados, nutrição, enem, salario, avaliacoes, agendamento, sobre) -->
-    <!-- Mantive o conteúdo das seções anteriores igual, apenas omitido para brevidade neste trecho -->
-    <section id="atendimento"><div class="card"><h3>🩺 Como funciona nosso atendimento</h3><p>Na Clinic Vet Dog, organizamos cada etapa para oferecer conforto, agilidade e segurança.</p><div class="card-grid"><div class="card"><h3>1️⃣ Agendamento</h3><p>Agende pelo site, WhatsApp ou telefone.</p></div><div class="card"><h3>2️⃣ Chegada & Acolhimento</h3><p>Ambiente climatizado, recepção acolhedora.</p></div><div class="card"><h3>3️⃣ Consulta e Diagnóstico</h3><p>Atendimento individualizado, exames no local.</p></div><div class="card"><h3>4️⃣ Acompanhamento</h3><p>Retornos agendados, suporte via WhatsApp.</p></div></div><div class="info-badge">⏰ Horário: Segunda a sábado, 8h às 20h | Emergências 24h</div></div></section>
-    <section id="cuidados"><div class="card"><h3>💖 Cuidados especiais</h3><ul class="care-list"><li><strong>Atendimento sem estresse:</strong> Técnicas de contenção suave.</li><li><strong>Monitoramento contínuo:</strong> Pacientes internados 24h.</li><li><strong>Espaço adaptado para gatos:</strong> Sala exclusiva com feromônios.</li></ul></div></section>
-    <section id="nutricao"><div class="card"><h3>🥗 Nutrição de qualidade</h3><ul class="nutrition-list"><li>Rações premium e super premium</li><li>Dietas naturais balanceadas</li><li>Orientação nutricional gratuita</li></ul></div></section>
-    <section id="enem"><div class="card"><h3>📌 Nota de Corte do ENEM</h3><div class="enem-table"><table><thead><tr><th>Instituição</th><th>Nota de Corte</th></tr></thead><tbody><tr><td>USP</td><td>780-798</td></tr><tr><td>UFMG</td><td>760-775</td></tr></tbody></table></div></div></section>
-    <section id="salario"><div class="card"><h3>💰 Média Salarial</h3><div class="salary-box"><div class="salary-number">R$ 4.200 a R$ 11.500+</div></div></div></section>
-    <section id="avaliacoes"><div class="card"><h3>⭐ Deixe seu comentário</h3><form id="commentForm"><div class="form-group"><label>Nome</label><input type="text" id="commentName"></div><div class="star-rating"><input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label><input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label><input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label><input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label><input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label></div><div class="form-group"><label>Comentário</label><textarea id="commentText"></textarea></div><button type="submit" class="btn">Enviar</button></form><div id="commentsContainer"></div></div></section>
-    <section id="agendamento"><div class="card"><h3>📅 Agende sua consulta</h3><form id="scheduleForm"><div class="form-group"><input type="text" id="tutorName" placeholder="Seu nome" required></div><div class="form-group"><input type="tel" id="phone" placeholder="Telefone" required></div><div class="form-group"><input type="email" id="email" placeholder="E-mail" required></div><div class="form-group"><input type="text" id="petName" placeholder="Nome do pet" required></div><div class="form-group"><select id="specialty" required><option value="">Especialidade</option><option>Clínica Geral</option></select></div><div class="form-group"><input type="date" id="preferredDate" required></div><button type="submit" class="btn">Agendar</button></form></div></section>
-    <section id="sobre"><div class="card"><h3>🐕 Nossa Filosofia</h3><p>Missão: Atendimento de excelência com empatia e tecnologia.</p></div></section>
+    <!-- SEÇÃO: COMO FUNCIONA O ATENDIMENTO -->
+    <section id="atendimento">
+        <div class="card">
+            <h3>🩺 Como funciona nosso atendimento</h3>
+            <p>Na Clinic Vet Dog, organizamos cada etapa para oferecer conforto, agilidade e segurança para você e seu pet.</p>
+            <div class="card-grid" style="margin-top: 20px;">
+                <div class="card" style="background: #fffef5;">
+                    <h3 style="font-size: 1.3rem;">1️⃣ Agendamento</h3>
+                    <p>Agende pelo site, WhatsApp ou telefone. Escolha a especialidade e o horário que melhor se encaixa na sua rotina.</p>
+                </div>
+                <div class="card" style="background: #fffef5;">
+                    <h3 style="font-size: 1.3rem;">2️⃣ Chegada & Acolhimento</h3>
+                    <p>Ambiente climatizado, recepção acolhedora e equipe preparada para receber você e seu pet com tranquilidade.</p>
+                </div>
+                <div class="card" style="background: #fffef5;">
+                    <h3 style="font-size: 1.3rem;">3️⃣ Consulta e Diagnóstico</h3>
+                    <p>Atendimento individualizado, exames de imagem e laboratório no local para diagnóstico rápido e preciso.</p>
+                </div>
+                <div class="card" style="background: #fffef5;">
+                    <h3 style="font-size: 1.3rem;">4️⃣ Acompanhamento</h3>
+                    <p>Retornos agendados, suporte via WhatsApp e plano de tratamento personalizado para cada caso.</p>
+                </div>
+            </div>
+            <div class="info-badge">
+                ⏰ <strong>Horário de funcionamento:</strong> Segunda a sábado, das 8h às 20h | Emergências 24h (plantão veterinário)
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: CUIDADOS COM O ANIMAL -->
+    <section id="cuidados">
+        <div class="card">
+            <h3>💖 Cuidados especiais que oferecemos</h3>
+            <p>Seu pet é tratado como membro da família. Nossos protocolos garantem bem-estar físico e emocional:</p>
+            <ul class="care-list">
+                <li><strong>Atendimento sem estresse:</strong> Utilizamos técnicas de contenção suave e ambiente adaptado para reduzir a ansiedade.</li>
+                <li><strong>Monitoramento contínuo:</strong> Pacientes internados recebem acompanhamento 24h com equipe especializada.</li>
+                <li><strong>Espaço adaptado para gatos:</strong> Sala exclusiva com feromônios e ambiente tranquilo para felinos.</li>
+                <li><strong>Protocolos de dor e bem-estar:</strong> Avaliamos a dor em cada etapa, garantindo conforto máximo.</li>
+                <li><strong>Cuidados pós-cirúrgicos:</strong> Acompanhamento detalhado com orientações personalizadas para recuperação rápida.</li>
+                <li><strong>Atendimento domiciliar:</strong> Para pacientes com mobilidade reduzida ou tutores que preferem conforto em casa.</li>
+            </ul>
+            <div class="info-badge" style="margin-top: 20px;">
+                🐕 <strong>Nosso compromisso:</strong> Respeito, paciência e amor em cada interação. Cada animal tem sua própria personalidade e tratamos com a individualidade que merecem.
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: NUTRIÇÃO DE QUALIDADE -->
+    <section id="nutricao">
+        <div class="card">
+            <h3>🥗 Nutrição de qualidade para seu pet</h3>
+            <p>A alimentação é a base da saúde! Nossos nutricionistas veterinários criam planos alimentares personalizados:</p>
+            <ul class="nutrition-list">
+                <li><strong>Rações premium e super premium:</strong> Parceria com marcas de alta qualidade, com opções para todas as fases da vida.</li>
+                <li><strong>Dietas naturais e caseiras balanceadas:</strong> Elaboradas por nutricionistas veterinários para garantir todos os nutrientes essenciais.</li>
+                <li><strong>Alimentação para condições específicas:</strong> Dietas terapêuticas para doenças renais, hepáticas, diabetes, alergias e obesidade.</li>
+                <li><strong>Suplementação personalizada:</strong> Vitaminas, ômega-3, probióticos e nutracêuticos conforme necessidade.</li>
+                <li><strong>Orientação nutricional gratuita:</strong> Consulta com nossa equipe para esclarecer dúvidas sobre a melhor alimentação.</li>
+            </ul>
+            <div class="info-badge" style="margin-top: 20px; background: #eff7ef;">
+                🍽️ <strong>Dica de ouro:</strong> Ofereça sempre água fresca e evite alimentos tóxicos como chocolate, cebola e uva. Conte conosco para montar a dieta ideal!
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: NOTA DE CORTE DO ENEM -->
+    <section id="enem">
+        <div class="card">
+            <h3>📌 Nota de Corte do ENEM</h3>
+            <p>Para ingressar em <strong>Medicina Veterinária</strong> nas melhores universidades públicas e privadas, a nota de corte varia conforme a modalidade de concorrência e região. Abaixo estão as médias de corte (últimos vestibulares via SISU) para ampla concorrência:</p>
+            <div class="enem-table">
+                 <table>
+                    <thead>
+                        <tr><th>Instituição (UF)</th><th>Nota de Corte (Média ENEM)</th><th>Peso Ciências Natureza</th>\
+                    </thead>
+                    <tbody>
+                        <tr><td>USP - Pirassununga (SP)</td><td class="highlight">780 - 798</td><td>Alto</td></tr>
+                        <tr><td>UFMG (MG)</td><td class="highlight">760 - 775</td><td>3,0</td></tr>
+                        <tr><td>UFRGS (RS)</td><td class="highlight">750 - 768</td><td>2,5</td></tr>
+                        <tr><td>UNESP - Botucatu (SP)</td><td class="highlight">745 - 760</td><td>2,0</td></tr>
+                        <tr><td>UFPR (PR)</td><td class="highlight">730 - 748</td><td>1,8</td></tr>
+                        <tr><td>UFF (RJ)</td><td class="highlight">715 - 735</td><td>1,5</td></tr>
+                        <tr><td>UFBA (BA)</td><td class="highlight">700 - 720</td><td>1,5</td></tr>
+                    </tbody>
+                 </table>
+                <div class="info-badge">
+                    ⚕️ <strong>Dica:</strong> Para Medicina Veterinária, as notas de corte costumam ser altas. Invista em redação e ciências da natureza. Nossa clínica valoriza profissionais que buscam excelência!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: MÉDIA SALARIAL -->
+    <section id="salario">
+        <div class="card">
+            <h3>💰 Média Salarial – Médico Veterinário</h3>
+            <p>O mercado para médicos veterinários está em plena expansão. Confira os valores médios no Brasil (dados 2024/2025):</p>
+            <div class="salary-box">
+                <div class="salary-number">R$ 4.200 a R$ 11.500+</div>
+                <p>Faixa salarial mensal (CLT / PJ / autônomo) conforme experiência e região.</p>
+                <hr style="margin: 15px 0; border-color: #cde0cd;">
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+                    <div><strong>🌱 Início de carreira</strong><br>R$ 3.200 - R$ 4.800</div>
+                    <div><strong>📈 Especialista</strong><br>R$ 7.500 - R$ 12.000</div>
+                    <div><strong>🏥 Gestão / Proprietário</strong><br>R$ 10.000 - R$ 20.000+</div>
+                </div>
+                <p style="margin-top: 20px;">📊 Fonte: CFMV / Conselho Regional de Medicina Veterinária.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: AVALIAÇÕES -->
+    <section id="avaliacoes">
+        <div class="card">
+            <h3>⭐ Deixe seu comentário sobre o atendimento</h3>
+            <p>Sua opinião é muito importante para nós!</p>
+            <form id="commentForm">
+                <div class="form-group">
+                    <label>Seu nome *</label>
+                    <input type="text" id="commentName" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Sua avaliação *</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Seu comentário *</label>
+                    <textarea id="commentText" placeholder="Conte como foi sua experiência..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar avaliação ✨</button>
+                <div id="commentSuccess" class="success-message">✅ Obrigado! Seu comentário foi enviado.</div>
+            </form>
+            <div class="comment-list">
+                <h4 style="color: #2d6a2d;">📝 Últimas avaliações</h4>
+                <div id="commentsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: AGENDAMENTO -->
+    <section id="agendamento">
+        <div class="card">
+            <h3>📅 Agende sua consulta</h3>
+            <p>Preencha o formulário e nossa equipe entrará em contato para confirmar.</p>
+            <form id="scheduleForm">
+                <div class="form-group"><label>Nome completo *</label><input type="text" id="tutorName" required></div>
+                <div class="form-group"><label>Telefone *</label><input type="tel" id="phone" required></div>
+                <div class="form-group"><label>E-mail *</label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Nome do pet *</label><input type="text" id="petName" required></div>
+                <div class="form-group"><label>Tipo de animal</label><select id="petType"><option value="cachorro">🐕 Cachorro</option><option value="gato">🐈 Gato</option><option value="outro">🐹 Outro</option></select></div>
+                <div class="form-group"><label>Especialidade *</label><select id="specialty" required><option value="">Selecione</option><option>Clínica Geral</option><option>Vacinas</option><option>Cirurgia</option><option>Dermatologia</option><option>Nutrição</option></select></div>
+                <div class="form-group"><label>Data preferencial *</label><input type="date" id="preferredDate" required></div>
+                <div class="form-group"><label>Horário</label><select id="preferredTime"><option>Manhã (8h-12h)</option><option>Tarde (13h-18h)</option><option>Noite (18h-21h)</option></select></div>
+                <button type="submit" class="btn">Solicitar agendamento 📞</button>
+                <div id="scheduleSuccess" class="success-message">✅ Agendamento solicitado! Entraremos em contato.</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre">
+        <div class="card">
+            <h3>🐕 Nossa Filosofia e Missão</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex:1"><p><strong>Missão:</strong> Proporcionar atendimento veterinário de excelência com empatia, tecnologia e responsabilidade.</p><p style="margin-top:15px;"><strong>Visão:</strong> Ser referência nacional em inovação clínica e gestão humanizada.</p><p style="margin-top:15px;"><strong>Valores:</strong> Ética, amor pelos animais, atualização contínua e compromisso com a comunidade.</p></div>
+                <div style="flex:0.7; background:#eff7ef; border-radius:28px; padding:18px; text-align:center; transition: transform 0.3s;"><span style="font-size:3rem;">🐕‍🦺</span><p><strong>+ 30 profissionais</strong><br> prontos para cuidar</p></div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
     <div class="container footer-content">
-        <div><p><strong>🐕 Clinic Vet Dog</strong></p><p>📍 Rua dos Cães, 520 - São Paulo - SP</p><p>📞 (11) 3088-4422</p></div>
-        <div class="footer-copy"><p>© 2025 Clinic Vet Dog</p></div>
+        <div><p><strong>🐕 Clinic Vet Dog</strong></p><p>📍 Rua dos Cães, 520 - Jardim dos Animais, São Paulo - SP</p><p>📞 (11) 3088-4422 | 📧 contato@clinicvetdog.com.br</p></div>
+        <div class="footer-copy"><p>© 2025 Clinic Vet Dog. Amor & ciência em cada patinha.</p><p>💚 Atendimento 24h - Emergências e consultas agendadas.</p></div>
     </div>
+    <div style="margin-top:20px; font-size:0.75rem;">Dados ENEM e salário baseados em levantamentos MEC/SISU 2024 e CFMV.</div>
 </footer>
 
 <!-- Botão WhatsApp flutuante (direita) -->
-<a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Clinic%20Vet%20Dog" target="_blank" class="floating-btn whatsapp-fixed">💬</a>
+<a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20ou%20tirar%20dúvidas%20sobre%20a%20Clinic%20Vet%20Dog" target="_blank" class="floating-btn whatsapp-fixed">💬</a>
 
 <!-- Botão IA flutuante (esquerda) -->
 <button class="floating-btn ai-fixed" id="aiButton">🤖</button>
@@ -744,12 +911,14 @@
     <div class="ai-chat-box" id="aiChatBox">
         <div class="ai-message bot">
             Olá! 🐕 Sou o assistente virtual da Clinic Vet Dog.<br>
-            Posso tirar suas dúvidas sobre:<br>
+            Estou aqui para tirar suas dúvidas 24h por dia!<br><br>
+            Posso ajudar com:<br>
             • Horários de atendimento<br>
-            • Especialidades<br>
-            • Vacinação<br>
+            • Especialidades disponíveis<br>
+            • Vacinação e cuidados<br>
             • Emergências<br>
-            • Agendamentos<br><br>
+            • Agendamentos<br>
+            • Preços e convênios<br><br>
             Como posso ajudar você hoje?
         </div>
     </div>
@@ -765,17 +934,19 @@
     function loadComments() {
         const stored = localStorage.getItem('clinicvetdog_comments');
         if (stored) comments = JSON.parse(stored);
-        else comments = [{ name: "Mariana Souza", rating: 5, text: "Atendimento maravilhoso!", date: "2025-03-18" }];
+        else comments = [{ name: "Mariana Souza", rating: 5, text: "Atendimento maravilhoso! Meu cachorro foi super bem tratado. Equipe muito atenciosa.", date: "2025-03-18" },{ name: "Ricardo Alves", rating: 5, text: "Excelente clínica! Profissionais incríveis e estrutura impecável.", date: "2025-03-15" }];
         renderComments();
     }
     function renderComments() {
         const container = document.getElementById('commentsContainer');
         if(!container) return;
-        container.innerHTML = comments.map(c => `<div class="comment-item"><div><span class="comment-name">${escapeHtml(c.name)}</span><span class="comment-stars">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span></div><div class="comment-text">${escapeHtml(c.text)}</div></div>`).join('');
+        if(comments.length===0){ container.innerHTML='<p>Seja o primeiro a comentar! 💚</p>'; return; }
+        container.innerHTML = comments.map(c => `<div class="comment-item"><div><span class="comment-name">${escapeHtml(c.name)}</span><span class="comment-stars">${'★'.repeat(c.rating)+'☆'.repeat(5-c.rating)}</span></div><div class="comment-text">${escapeHtml(c.text)}</div><div class="comment-date">📅 ${c.date||'Recente'}</div></div>`).join('');
     }
     function escapeHtml(str){ if(!str) return ''; return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
-    document.getElementById('commentForm')?.addEventListener('submit', function(e){ e.preventDefault(); const name=document.getElementById('commentName').value.trim(); const rating=document.querySelector('input[name="rating"]:checked'); const text=document.getElementById('commentText').value.trim(); if(!name||!rating||!text) return; comments.unshift({name,rating:parseInt(rating.value),text,date:new Date().toISOString().slice(0,10)}); localStorage.setItem('clinicvetdog_comments',JSON.stringify(comments)); renderComments(); document.getElementById('commentName').value=''; document.querySelectorAll('input[name="rating"]').forEach(r=>r.checked=false); document.getElementById('commentText').value=''; alert('Comentário enviado!'); });
-    document.getElementById('scheduleForm')?.addEventListener('submit', function(e){ e.preventDefault(); alert('Agendamento solicitado! Entraremos em contato.'); this.reset(); });
+    function addComment(name,rating,text){ const today=new Date().toISOString().slice(0,10); comments.unshift({name,rating:parseInt(rating),text,date:today}); if(comments.length>15) comments.pop(); localStorage.setItem('clinicvetdog_comments',JSON.stringify(comments)); renderComments(); }
+    document.getElementById('commentForm')?.addEventListener('submit',function(e){ e.preventDefault(); const name=document.getElementById('commentName').value.trim(); const rating=document.querySelector('input[name="rating"]:checked'); const text=document.getElementById('commentText').value.trim(); if(!name||!rating||!text){ alert('Preencha todos os campos'); return; } addComment(name,rating.value,text); document.getElementById('commentName').value=''; document.querySelectorAll('input[name="rating"]').forEach(r=>r.checked=false); document.getElementById('commentText').value=''; const msg=document.getElementById('commentSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); });
+    document.getElementById('scheduleForm')?.addEventListener('submit',function(e){ e.preventDefault(); const tutor=document.getElementById('tutorName').value.trim(); const phone=document.getElementById('phone').value.trim(); const email=document.getElementById('email').value.trim(); const pet=document.getElementById('petName').value.trim(); const spec=document.getElementById('specialty').value; const date=document.getElementById('preferredDate').value; if(!tutor||!phone||!email||!pet||!spec||!date){ alert('Preencha todos os campos obrigatórios'); return; } const appointments=JSON.parse(localStorage.getItem('clinicvetdog_appointments')||'[]'); appointments.push({tutor,pet,specialty:spec,date,timeSlot:document.getElementById('preferredTime').value,email,phone,createdAt:new Date().toISOString()}); localStorage.setItem('clinicvetdog_appointments',JSON.stringify(appointments)); const msg=document.getElementById('scheduleSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); document.getElementById('scheduleForm').reset(); });
     loadComments();
 
     // IA - Chatbot Inteligente
@@ -826,12 +997,11 @@
     function getAIResponse(userMessage) {
         const msg = userMessage.toLowerCase().trim();
         
-        // Respostas inteligentes da IA
         if (msg.includes('horário') || msg.includes('funcionamento') || msg.includes('abre') || msg.includes('fecha')) {
             return "Atendemos de segunda a sábado, das 8h às 20h. Emergências 24h todos os dias! 🐕";
         }
         if (msg.includes('especialidade') || msg.includes('especialista') || msg.includes('consulta')) {
-            return "Temos especialidades como: Clínica Geral, Vacinação, Cirurgia, Dermatologia, Odontologia, Ortopedia, Nutrição e Oncologia. Qual área você precisa?";
+            return "Temos especialidades: Clínica Geral, Vacinação, Cirurgia, Dermatologia, Odontologia, Ortopedia, Nutrição e Oncologia. Qual área você precisa?";
         }
         if (msg.includes('vacina') || msg.includes('vacinação')) {
             return "Oferecemos vacinação completa: V8/V10 (cachorros), Quádrupla/Quíntupla (gatos), antirrábica e outras. Agende uma consulta para avaliar o calendário ideal! 💉";
@@ -839,20 +1009,17 @@
         if (msg.includes('emergência') || msg.includes('urgente') || msg.includes('plantão')) {
             return "Temos plantão 24h para emergências! Ligue imediatamente para (11) 3088-4422 ou venha até nossa clínica. Estamos sempre prontos para ajudar! 🚨";
         }
-        if (msg.includes('agendar') || msg.includes('marcar') || msg.includes('consulta')) {
+        if (msg.includes('agendar') || msg.includes('marcar')) {
             return "Para agendar, você pode usar o formulário na seção 'Agendar' do site, ou falar conosco pelo WhatsApp. Será um prazer atender você e seu pet! 📅";
         }
-        if (msg.includes('preço') || msg.includes('valor') || msg.includes('custa')) {
-            return "Os valores variam conforme o serviço e especialidade. Entre em contato pelo WhatsApp para um orçamento detalhado e transparente! 💰";
+        if (msg.includes('preço') || msg.includes('valor') || msg.includes('custa') || msg.includes('convênio')) {
+            return "Os valores variam conforme o serviço e especialidade. Trabalhamos com diversos convênios. Entre em contato pelo WhatsApp para um orçamento detalhado e transparente! 💰";
         }
         if (msg.includes('endereço') || msg.includes('localização') || msg.includes('onde fica')) {
             return "Estamos localizados na Rua dos Cães, 520 - Jardim dos Animais, São Paulo - SP. Fácil acesso e estacionamento conveniado! 📍";
         }
         if (msg.includes('cachorro') || msg.includes('gato') || msg.includes('pet')) {
             return "Atendemos cães, gatos e outros pequenos animais! Cada pet recebe atendimento individualizado e carinhoso. 🐶🐱🐹";
-        }
-        if (msg.includes('banho') || msg.includes('tosa')) {
-            return "Atualmente nossa clínica é focada em atendimento veterinário. Para banho e tosa, temos parceiros indicados. Pergunte no WhatsApp! ✂️";
         }
         if (msg.includes('obrigado') || msg.includes('valeu') || msg.includes('gratidão')) {
             return "Por nada! Estamos sempre aqui para ajudar você e seu pet. Se precisar de mais alguma coisa, é só chamar! 🐕💚";
