@@ -89,6 +89,7 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
         .btn:hover {
             background-color: #ffcd6b;
@@ -168,6 +169,110 @@
             border-radius: 28px;
             padding: 20px;
             margin: 25px 0 0;
+        }
+
+        /* formulários */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #235b2e;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e8dd;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: 0.2s;
+            background: #fefef9;
+        }
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f5b642;
+            box-shadow: 0 0 0 3px rgba(245, 182, 66, 0.2);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 28px;
+            color: #ddd;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-bottom: 0;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #f5b642;
+        }
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 16px;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+        .comment-list {
+            margin-top: 30px;
+            border-top: 2px dashed #cce3cd;
+            padding-top: 25px;
+        }
+        .comment-item {
+            background: #faf9f0;
+            border-radius: 20px;
+            padding: 18px;
+            margin-bottom: 16px;
+            border-left: 4px solid #f5b642;
+        }
+        .comment-name {
+            font-weight: bold;
+            color: #1c4b2d;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .comment-stars {
+            color: #f5b642;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+        .comment-text {
+            margin-top: 10px;
+            color: #2d422c;
+        }
+        .comment-date {
+            font-size: 0.75rem;
+            color: #7c8f78;
+            margin-top: 8px;
+        }
+        .btn-small {
+            background-color: #e9ece5;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            border-radius: 30px;
+            color: #1f3d24;
+            margin-left: 10px;
         }
 
         /* tabela enem + salário */
@@ -280,6 +385,8 @@
             <a href="#enem">Nota ENEM</a>
             <a href="#salario">Média Salarial</a>
             <a href="#referencias">Referências</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#agendamento">Agendar</a>
         </div>
     </div>
 </header>
@@ -290,10 +397,9 @@
         <div class="hero-text">
             <h2>Saúde e bem-estar<br>para quem você ama 🐶🐱</h2>
             <p>Atendimento humanizado, tecnologia de ponta e profissionais apaixonados por pets. Há mais de 12 anos cuidando do seu melhor amigo.</p>
-            <a href="#referencias" class="btn">Conheça nossa história →</a>
+            <a href="#agendamento" class="btn">Agende sua consulta →</a>
         </div>
         <div class="hero-img">
-            <!-- SVG ilustrativo de vet clinic -->
             <svg width="260" height="200" viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="150" cy="110" r="70" fill="#E6F0E3" stroke="#34623C" stroke-width="2"/>
                 <path d="M115 95 L130 85 L145 95 L160 85 L175 95" stroke="#4A6A3B" stroke-width="3" fill="none" stroke-linecap="round"/>
@@ -374,7 +480,6 @@
             </div>
         </div>
 
-        <!-- Mais referências acadêmicas e parcerias -->
         <div class="card-grid" style="margin-top: 20px;">
             <div class="card" style="background: #fefaf0;">
                 <h3 style="font-size: 1.4rem;">📚 Referências técnicas</h3>
@@ -387,6 +492,110 @@
                 <p style="margin-top: 16px;"><i>"Ambiente acolhedor e veterinários extremamente competentes. Referência absoluta em São Paulo."</i> – Rafael C.</p>
                 <p style="margin-top: 16px;">✔️ +1.200 avaliações 5 estrelas no Google Meu Negócio.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: AVALIAÇÕES / COMENTÁRIOS DOS CLIENTES -->
+    <section id="avaliacoes">
+        <div class="card">
+            <h3>⭐ Deixe seu comentário sobre o atendimento</h3>
+            <p>Sua opinião é muito importante para nós! Compartilhe sua experiência com a VetCare.</p>
+            
+            <form id="commentForm">
+                <div class="form-group">
+                    <label>Seu nome *</label>
+                    <input type="text" id="commentName" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Sua avaliação *</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Seu comentário *</label>
+                    <textarea id="commentText" placeholder="Conte como foi sua experiência conosco..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar avaliação ✨</button>
+                <div id="commentSuccess" class="success-message">✅ Obrigado! Seu comentário foi enviado com sucesso.</div>
+            </form>
+
+            <div class="comment-list">
+                <h4 style="color: #235b2e; margin-bottom: 15px;">📝 Últimas avaliações de clientes</h4>
+                <div id="commentsContainer">
+                    <!-- Comentários serão inseridos dinamicamente aqui -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: AGENDAMENTO DE CONSULTA -->
+    <section id="agendamento">
+        <div class="card">
+            <h3>📅 Agende sua consulta</h3>
+            <p>Preencha o formulário abaixo e nossa equipe entrará em contato para confirmar o horário.</p>
+            
+            <form id="scheduleForm">
+                <div class="form-group">
+                    <label>Nome completo do tutor *</label>
+                    <input type="text" id="tutorName" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone para contato *</label>
+                    <input type="tel" id="phone" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail *</label>
+                    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Nome do pet *</label>
+                    <input type="text" id="petName" placeholder="Nome do seu animal" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de animal</label>
+                    <select id="petType">
+                        <option value="cachorro">🐕 Cachorro</option>
+                        <option value="gato">🐈 Gato</option>
+                        <option value="outro">🐹 Outro (ave, roedor, etc)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Especialidade desejada *</label>
+                    <select id="specialty" required>
+                        <option value="">Selecione...</option>
+                        <option value="clinica geral">Clínica Geral</option>
+                        <option value="vacinas">Vacinação</option>
+                        <option value="cirurgia">Cirurgia</option>
+                        <option value="dermatologia">Dermatologia</option>
+                        <option value="odontologia">Odontologia</option>
+                        <option value="ortopedia">Ortopedia</option>
+                        <option value="oncologia">Oncologia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Data preferencial *</label>
+                    <input type="date" id="preferredDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Horário preferencial</label>
+                    <select id="preferredTime">
+                        <option value="manha">Manhã (8h às 12h)</option>
+                        <option value="tarde">Tarde (13h às 18h)</option>
+                        <option value="noite">Noite (18h às 21h)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem adicional (opcional)</label>
+                    <textarea id="message" placeholder="Conte-nos mais sobre seu pet ou alguma necessidade especial..."></textarea>
+                </div>
+                <button type="submit" class="btn">Solicitar agendamento 📞</button>
+                <div id="scheduleSuccess" class="success-message">✅ Agendamento solicitado! Entraremos em contato em breve para confirmar.</div>
+            </form>
         </div>
     </section>
 
@@ -426,5 +635,129 @@
     </div>
 </footer>
 
-</body>
-</html>
+<script>
+    // Sistema de comentários com localStorage
+    let comments = [];
+
+    function loadComments() {
+        const stored = localStorage.getItem('vetcare_comments');
+        if (stored) {
+            comments = JSON.parse(stored);
+        } else {
+            // Comentários iniciais de exemplo
+            comments = [
+                { name: "Fernanda Lima", rating: 5, text: "Atendimento maravilhoso! Minha gatinha foi super bem tratada. Equipe muito atenciosa e estrutura impecável.", date: "2025-03-15" },
+                { name: "Carlos Eduardo", rating: 5, text: "Excelente clínica! O Dr. Ricardo é um profissional incrível. Meu cachorro já está 100% recuperado.", date: "2025-03-10" },
+                { name: "Juliana M.", rating: 4, text: "Gostei muito do cuidado com meu pet. Só demorou um pouco no agendamento, mas valeu a pena.", date: "2025-03-05" }
+            ];
+        }
+        renderComments();
+    }
+
+    function renderComments() {
+        const container = document.getElementById('commentsContainer');
+        if (!container) return;
+        
+        if (comments.length === 0) {
+            container.innerHTML = '<p style="color:#7c8f78;">Seja o primeiro a deixar um comentário! 💚</p>';
+            return;
+        }
+        
+        container.innerHTML = comments.map(comment => {
+            const stars = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
+            return `
+                <div class="comment-item">
+                    <div>
+                        <span class="comment-name">${escapeHtml(comment.name)}</span>
+                        <span class="comment-stars">${stars}</span>
+                    </div>
+                    <div class="comment-text">${escapeHtml(comment.text)}</div>
+                    <div class="comment-date">📅 ${comment.date || 'Recente'}</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+
+    function addComment(name, rating, text) {
+        const today = new Date().toISOString().slice(0, 10);
+        comments.unshift({
+            name: name,
+            rating: parseInt(rating),
+            text: text,
+            date: today
+        });
+        if (comments.length > 15) comments.pop();
+        localStorage.setItem('vetcare_comments', JSON.stringify(comments));
+        renderComments();
+    }
+
+    // Formulário de comentários
+    const commentForm = document.getElementById('commentForm');
+    if (commentForm) {
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('commentName').value.trim();
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const text = document.getElementById('commentText').value.trim();
+            
+            if (!name || !rating || !text) {
+                alert('Por favor, preencha todos os campos obrigatórios (nome, avaliação e comentário).');
+                return;
+            }
+            
+            addComment(name, rating.value, text);
+            
+            // Limpar formulário
+            document.getElementById('commentName').value = '';
+            document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+            document.getElementById('commentText').value = '';
+            
+            const successMsg = document.getElementById('commentSuccess');
+            successMsg.style.display = 'block';
+            setTimeout(() => { successMsg.style.display = 'none'; }, 3000);
+        });
+    }
+
+    // Formulário de agendamento
+    const scheduleForm = document.getElementById('scheduleForm');
+    if (scheduleForm) {
+        scheduleForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const tutorName = document.getElementById('tutorName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const petName = document.getElementById('petName').value.trim();
+            const specialty = document.getElementById('specialty').value;
+            const preferredDate = document.getElementById('preferredDate').value;
+            
+            if (!tutorName || !phone || !email || !petName || !specialty || !preferredDate) {
+                alert('Por favor, preencha todos os campos obrigatórios (*).');
+                return;
+            }
+            
+            // Simular envio - armazenar no localStorage como histórico simples
+            const appointments = JSON.parse(localStorage.getItem('vetcare_appointments') || '[]');
+            appointments.push({
+                tutor: tutorName,
+                pet: petName,
+                specialty: specialty,
+                date: preferredDate,
+                timeSlot: document.getElementById('preferredTime').value,
+                email: email,
+                phone: phone,
+                message: document.getElementById('message').value,
+                createdAt: new Date().toISOString()
+            });
