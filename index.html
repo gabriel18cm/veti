@@ -123,14 +123,14 @@
             background-color: #1da851;
         }
 
-        /* BANNER HERO - NOVO ESPAÇO COM IMAGEM DE FUNDO */
+        /* NOVO BANNER COM FUNDO */
         .hero-banner {
             position: relative;
             width: 100%;
             margin: 40px 0 50px;
             border-radius: 48px;
             overflow: hidden;
-            background-image: url('https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-image: url('https://images.pexels.com/photos/6233324/pexels-photo-6233324.jpeg?auto=compress&cs=tinysrgb&w=1600');
             background-size: cover;
             background-position: center 30%;
             box-shadow: 0 20px 35px -10px rgba(0,0,0,0.15);
@@ -148,40 +148,65 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(30, 60, 30, 0.7) 0%, rgba(20, 45, 20, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(30, 60, 30, 0.75) 0%, rgba(20, 45, 20, 0.65) 100%);
             z-index: 1;
         }
-        .hero-content {
+        .hero-banner-content {
             position: relative;
             z-index: 2;
-            padding: 80px 60px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 60px 48px;
             color: white;
             text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-            backdrop-filter: brightness(1.05);
         }
-        .hero-content h2 {
-            font-size: 3.2rem;
+        .hero-text {
+            flex: 1.2;
+        }
+        .hero-text h2 {
+            font-size: 2.8rem;
             font-weight: 800;
+            color: white;
             line-height: 1.2;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+            transition: text-shadow 0.3s ease;
         }
-        .hero-content p {
-            font-size: 1.25rem;
-            max-width: 70%;
-            margin-bottom: 32px;
+        .hero-text h2:hover {
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.4);
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #f9ffe6;
             opacity: 0.95;
-            font-weight: 500;
         }
-        .hero-content .btn-whatsapp {
-            background-color: #25D366;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-            font-size: 1.1rem;
-            padding: 14px 32px;
+        .hero-img {
+            flex: 1;
+            background: rgba(255,255,240,0.15);
+            backdrop-filter: blur(2px);
+            border-radius: 48px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,200,0.3);
         }
-        .hero-content .btn-whatsapp:hover {
-            background-color: #1da851;
-            transform: translateY(-3px);
+        .hero-img:hover {
+            transform: scale(1.02);
+            background: rgba(255,255,240,0.25);
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.3);
+        }
+        .hero-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 32px;
+            transition: transform 0.3s ease;
+        }
+        .hero-img:hover img {
+            transform: scale(1.02);
         }
         @keyframes fadeInUp {
             from {
@@ -651,14 +676,13 @@
             .nav-links a {
                 margin: 0 12px;
             }
-            .hero-content {
-                padding: 50px 30px;
+            .hero-banner-content {
+                padding: 40px 28px;
             }
-            .hero-content h2 {
-                font-size: 2.2rem;
+            .hero-text h2 {
+                font-size: 2rem;
             }
-            .hero-content p {
-                max-width: 100%;
+            .hero-text p {
                 font-size: 1rem;
             }
             .card h3 {
@@ -706,12 +730,17 @@
 </header>
 
 <main class="container">
-    <!-- BANNER HERO COM IMAGEM DE FUNDO E CONTEÚDO -->
+    <!-- BANNER HERO COM IMAGEM DE FUNDO + TEXTO + IMAGEM -->
     <div class="hero-banner">
-        <div class="hero-content">
-            <h2>Amor que cura,<br>ciência que acolhe 🐕🐾</h2>
-            <p>Atendimento humanizado, tecnologia de ponta e profissionais apaixonados por pets. Há mais de 10 anos cuidando do seu melhor amigo com carinho e dedicação.</p>
-            <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Clinic%20Vet%20Dog" target="_blank" class="btn btn-whatsapp">📱 Fale conosco no WhatsApp</a>
+        <div class="hero-banner-content">
+            <div class="hero-text">
+                <h2>Amor que cura,<br>ciência que acolhe 🐕🐾</h2>
+                <p>Atendimento humanizado, tecnologia de ponta e profissionais apaixonados por pets. Há mais de 10 anos cuidando do seu melhor amigo com carinho e dedicação.</p>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20a%20Clinic%20Vet%20Dog" target="_blank" class="btn btn-whatsapp">📱 Fale conosco no WhatsApp</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxHgskxw4fZ1WCkKuqWSDV2d7mykOBkNYt3A&s" alt="Cachorro feliz na clínica">
+            </div>
         </div>
     </div>
 
@@ -832,4 +861,227 @@
         <div class="card">
             <h3>⭐ Deixe seu comentário sobre o atendimento</h3>
             <p>Sua opinião é muito importante para nós!</p>
-            <form id="commentForm
+            <form id="commentForm">
+                <div class="form-group">
+                    <label>Seu nome *</label>
+                    <input type="text" id="commentName" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Sua avaliação *</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Seu comentário *</label>
+                    <textarea id="commentText" placeholder="Conte como foi sua experiência..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar avaliação ✨</button>
+                <div id="commentSuccess" class="success-message">✅ Obrigado! Seu comentário foi enviado.</div>
+            </form>
+            <div class="comment-list">
+                <h4 style="color: #2d6a2d;">📝 Últimas avaliações</h4>
+                <div id="commentsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: AGENDAMENTO -->
+    <section id="agendamento">
+        <div class="card">
+            <h3>📅 Agende sua consulta</h3>
+            <p>Preencha o formulário e nossa equipe entrará em contato para confirmar.</p>
+            <form id="scheduleForm">
+                <div class="form-group"><label>Nome completo *</label><input type="text" id="tutorName" required></div>
+                <div class="form-group"><label>Telefone *</label><input type="tel" id="phone" required></div>
+                <div class="form-group"><label>E-mail *</label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Nome do pet *</label><input type="text" id="petName" required></div>
+                <div class="form-group"><label>Tipo de animal</label><select id="petType"><option value="cachorro">🐕 Cachorro</option><option value="gato">🐈 Gato</option><option value="outro">🐹 Outro</option></select></div>
+                <div class="form-group"><label>Especialidade *</label><select id="specialty" required><option value="">Selecione</option><option>Clínica Geral</option><option>Vacinas</option><option>Cirurgia</option><option>Dermatologia</option><option>Nutrição</option></select></div>
+                <div class="form-group"><label>Data preferencial *</label><input type="date" id="preferredDate" required></div>
+                <div class="form-group"><label>Horário</label><select id="preferredTime"><option>Manhã (8h-12h)</option><option>Tarde (13h-18h)</option><option>Noite (18h-21h)</option></select></div>
+                <button type="submit" class="btn">Solicitar agendamento 📞</button>
+                <div id="scheduleSuccess" class="success-message">✅ Agendamento solicitado! Entraremos em contato.</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre">
+        <div class="card">
+            <h3>🐕 Nossa Filosofia e Missão</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex:1"><p><strong>Missão:</strong> Proporcionar atendimento veterinário de excelência com empatia, tecnologia e responsabilidade.</p><p style="margin-top:15px;"><strong>Visão:</strong> Ser referência nacional em inovação clínica e gestão humanizada.</p><p style="margin-top:15px;"><strong>Valores:</strong> Ética, amor pelos animais, atualização contínua e compromisso com a comunidade.</p></div>
+                <div style="flex:0.7; background:#eff7ef; border-radius:28px; padding:18px; text-align:center; transition: transform 0.3s;"><span style="font-size:3rem;">🐕‍🦺</span><p><strong>+ 30 profissionais</strong><br> prontos para cuidar</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div><p><strong>🐕 Clinic Vet Dog</strong></p><p>📍 Rua dos Cães, 520 - Jardim dos Animais, São Paulo - SP</p><p>📞 (11) 3088-4422 | 📧 contato@clinicvetdog.com.br</p></div>
+        <div class="footer-copy"><p>© 2025 Clinic Vet Dog. Amor & ciência em cada patinha.</p><p>💚 Atendimento 24h - Emergências e consultas agendadas.</p></div>
+    </div>
+    <div style="margin-top:20px; font-size:0.75rem;">Dados ENEM e salário baseados em levantamentos MEC/SISU 2024 e CFMV.</div>
+</footer>
+
+<!-- Botão WhatsApp flutuante (direita) -->
+<a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20ou%20tirar%20dúvidas%20sobre%20a%20Clinic%20Vet%20Dog" target="_blank" class="floating-btn whatsapp-fixed">💬</a>
+
+<!-- Botão IA flutuante (esquerda) -->
+<button class="floating-btn ai-fixed" id="aiButton">🤖</button>
+
+<!-- Modal da IA -->
+<div class="ai-modal" id="aiModal">
+    <div class="ai-modal-header">
+        <h3>Assistente Virtual - Clinic Vet Dog</h3>
+        <button class="close-ai" id="closeAiModal">×</button>
+    </div>
+    <div class="ai-chat-box" id="aiChatBox">
+        <div class="ai-message bot">
+            Olá! 🐕 Sou o assistente virtual da Clinic Vet Dog.<br>
+            Estou aqui para tirar suas dúvidas 24h por dia!<br><br>
+            Posso ajudar com:<br>
+            • Horários de atendimento<br>
+            • Especialidades disponíveis<br>
+            • Vacinação e cuidados<br>
+            • Emergências<br>
+            • Agendamentos<br>
+            • Preços e convênios<br><br>
+            Como posso ajudar você hoje?
+        </div>
+    </div>
+    <div class="ai-input-area">
+        <input type="text" id="aiInput" placeholder="Digite sua pergunta..." autocomplete="off">
+        <button id="aiSendBtn">Enviar</button>
+    </div>
+</div>
+
+<script>
+    // Sistema de comentários
+    let comments = [];
+    function loadComments() {
+        const stored = localStorage.getItem('clinicvetdog_comments');
+        if (stored) comments = JSON.parse(stored);
+        else comments = [{ name: "Mariana Souza", rating: 5, text: "Atendimento maravilhoso! Meu cachorro foi super bem tratado. Equipe muito atenciosa.", date: "2025-03-18" },{ name: "Ricardo Alves", rating: 5, text: "Excelente clínica! Profissionais incríveis e estrutura impecável.", date: "2025-03-15" }];
+        renderComments();
+    }
+    function renderComments() {
+        const container = document.getElementById('commentsContainer');
+        if(!container) return;
+        if(comments.length===0){ container.innerHTML='<p>Seja o primeiro a comentar! 💚</p>'; return; }
+        container.innerHTML = comments.map(c => `<div class="comment-item"><div><span class="comment-name">${escapeHtml(c.name)}</span><span class="comment-stars">${'★'.repeat(c.rating)+'☆'.repeat(5-c.rating)}</span></div><div class="comment-text">${escapeHtml(c.text)}</div><div class="comment-date">📅 ${c.date||'Recente'}</div></div>`).join('');
+    }
+    function escapeHtml(str){ if(!str) return ''; return str.replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+    function addComment(name,rating,text){ const today=new Date().toISOString().slice(0,10); comments.unshift({name,rating:parseInt(rating),text,date:today}); if(comments.length>15) comments.pop(); localStorage.setItem('clinicvetdog_comments',JSON.stringify(comments)); renderComments(); }
+    document.getElementById('commentForm')?.addEventListener('submit',function(e){ e.preventDefault(); const name=document.getElementById('commentName').value.trim(); const rating=document.querySelector('input[name="rating"]:checked'); const text=document.getElementById('commentText').value.trim(); if(!name||!rating||!text){ alert('Preencha todos os campos'); return; } addComment(name,rating.value,text); document.getElementById('commentName').value=''; document.querySelectorAll('input[name="rating"]').forEach(r=>r.checked=false); document.getElementById('commentText').value=''; const msg=document.getElementById('commentSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); });
+    document.getElementById('scheduleForm')?.addEventListener('submit',function(e){ e.preventDefault(); const tutor=document.getElementById('tutorName').value.trim(); const phone=document.getElementById('phone').value.trim(); const email=document.getElementById('email').value.trim(); const pet=document.getElementById('petName').value.trim(); const spec=document.getElementById('specialty').value; const date=document.getElementById('preferredDate').value; if(!tutor||!phone||!email||!pet||!spec||!date){ alert('Preencha todos os campos obrigatórios'); return; } const appointments=JSON.parse(localStorage.getItem('clinicvetdog_appointments')||'[]'); appointments.push({tutor,pet,specialty:spec,date,timeSlot:document.getElementById('preferredTime').value,email,phone,createdAt:new Date().toISOString()}); localStorage.setItem('clinicvetdog_appointments',JSON.stringify(appointments)); const msg=document.getElementById('scheduleSuccess'); msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); document.getElementById('scheduleForm').reset(); });
+    loadComments();
+
+    // IA - Chatbot Inteligente
+    const aiButton = document.getElementById('aiButton');
+    const aiModal = document.getElementById('aiModal');
+    const closeAiModal = document.getElementById('closeAiModal');
+    const aiInput = document.getElementById('aiInput');
+    const aiSendBtn = document.getElementById('aiSendBtn');
+    const aiChatBox = document.getElementById('aiChatBox');
+
+    function openModal() { aiModal.style.display = 'block'; }
+    function closeModal() { aiModal.style.display = 'none'; }
+
+    aiButton.addEventListener('click', openModal);
+    closeAiModal.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => { if (e.target === aiModal) closeModal(); });
+
+    function addUserMessage(text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'ai-message user';
+        msgDiv.textContent = text;
+        aiChatBox.appendChild(msgDiv);
+        aiChatBox.scrollTop = aiChatBox.scrollHeight;
+    }
+
+    function addBotMessage(text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'ai-message bot';
+        msgDiv.textContent = text;
+        aiChatBox.appendChild(msgDiv);
+        aiChatBox.scrollTop = aiChatBox.scrollHeight;
+    }
+
+    function showTyping() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'typing-indicator';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = '<span></span><span></span><span></span>';
+        aiChatBox.appendChild(typingDiv);
+        aiChatBox.scrollTop = aiChatBox.scrollHeight;
+    }
+
+    function removeTyping() {
+        const typing = document.getElementById('typingIndicator');
+        if (typing) typing.remove();
+    }
+
+    function getAIResponse(userMessage) {
+        const msg = userMessage.toLowerCase().trim();
+        
+        if (msg.includes('horário') || msg.includes('funcionamento') || msg.includes('abre') || msg.includes('fecha')) {
+            return "Atendemos de segunda a sábado, das 8h às 20h. Emergências 24h todos os dias! 🐕";
+        }
+        if (msg.includes('especialidade') || msg.includes('especialista') || msg.includes('consulta')) {
+            return "Temos especialidades: Clínica Geral, Vacinação, Cirurgia, Dermatologia, Odontologia, Ortopedia, Nutrição e Oncologia. Qual área você precisa?";
+        }
+        if (msg.includes('vacina') || msg.includes('vacinação')) {
+            return "Oferecemos vacinação completa: V8/V10 (cachorros), Quádrupla/Quíntupla (gatos), antirrábica e outras. Agende uma consulta para avaliar o calendário ideal! 💉";
+        }
+        if (msg.includes('emergência') || msg.includes('urgente') || msg.includes('plantão')) {
+            return "Temos plantão 24h para emergências! Ligue imediatamente para (11) 3088-4422 ou venha até nossa clínica. Estamos sempre prontos para ajudar! 🚨";
+        }
+        if (msg.includes('agendar') || msg.includes('marcar')) {
+            return "Para agendar, você pode usar o formulário na seção 'Agendar' do site, ou falar conosco pelo WhatsApp. Será um prazer atender você e seu pet! 📅";
+        }
+        if (msg.includes('preço') || msg.includes('valor') || msg.includes('custa') || msg.includes('convênio')) {
+            return "Os valores variam conforme o serviço e especialidade. Trabalhamos com diversos convênios. Entre em contato pelo WhatsApp para um orçamento detalhado e transparente! 💰";
+        }
+        if (msg.includes('endereço') || msg.includes('localização') || msg.includes('onde fica')) {
+            return "Estamos localizados na Rua dos Cães, 520 - Jardim dos Animais, São Paulo - SP. Fácil acesso e estacionamento conveniado! 📍";
+        }
+        if (msg.includes('cachorro') || msg.includes('gato') || msg.includes('pet')) {
+            return "Atendemos cães, gatos e outros pequenos animais! Cada pet recebe atendimento individualizado e carinhoso. 🐶🐱🐹";
+        }
+        if (msg.includes('obrigado') || msg.includes('valeu') || msg.includes('gratidão')) {
+            return "Por nada! Estamos sempre aqui para ajudar você e seu pet. Se precisar de mais alguma coisa, é só chamar! 🐕💚";
+        }
+        
+        return "Desculpe, não entendi sua pergunta. Posso ajudar com informações sobre: horários, especialidades, vacinas, emergências, agendamentos, preços ou endereço. Digite sua dúvida de outra forma ou entre em contato pelo WhatsApp para atendimento personalizado! 🐾";
+    }
+
+    function sendMessage() {
+        const userText = aiInput.value.trim();
+        if (userText === '') return;
+        
+        addUserMessage(userText);
+        aiInput.value = '';
+        
+        showTyping();
+        
+        setTimeout(() => {
+            removeTyping();
+            const response = getAIResponse(userText);
+            addBotMessage(response);
+        }, 600 + Math.random() * 400);
+    }
+
+    aiSendBtn.addEventListener('click', sendMessage);
+    aiInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
+</script>
+</body>
+</html>
